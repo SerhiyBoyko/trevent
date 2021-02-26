@@ -1,0 +1,73 @@
+mixin phone()
+    .phone
+        img.phone__icon(src='images/icons/phone.png')
+        div
+            .phone__descr Графік роботи: 09:00-18:00
+            a.phone__link(href='tel:380988690025') (098) 86 900 25
+            span.icon-drop
+mixin lang()
+    ul.lang
+        li.lang__selected
+            img.lang__flag(src="images/flags/ua.png", alt="")
+            a.lang__text(href='') UA
+            span.icon-drop
+            ul
+                li
+                    a(href='#')
+                        span.lang__text EN
+                li
+                    a(href='#')
+                        span.lang__text PL
+                        img.lang__flag(src="images/flags/pl.png", alt="")
+                li
+                    a(href='#')
+                        span.lang__text RU
+                        img.lang__flag(src="images/flags/ru.png", alt="")
+mixin nav()
+    ul.nav
+        li: a(href='#') ГОЛОВНА
+        li: a(href='#') Компанія
+        li.has-sub
+            a(href='#') Продукція
+            span.icon-drop
+            ul
+                li: a(href='#') Документація
+                li: a(href='#') Питання та відповіді
+                li: a(href='#') Відео та мультимедія
+        li.has-sub
+            a(href='#') Підтримка
+            span.icon-drop
+            ul
+                li: a(href='#') Документація
+                li: a(href='#') Питання та відповіді
+                li: a(href='#') Відео та мультимедія
+        li: a(href='#') Контакти
+
+mixin search()
+    .search: span.icon-search
+
+header.header
+    .container-wide
+        .header__row
+            a.header__logo(href="index.html"): img(src="images/logo.png", alt="")
+            .phone
+                img.phone__icon(src='images/icons/phone.png')
+                div
+                    .phone__descr Графік роботи: 09:00-18:00
+                    a.phone__link(href='tel:380988690025') (098) 86 900 25
+                    span.icon-drop
+            div.flex-align
+                +lang()
+                +nav()
+                +search()
+            .hamburger
+                span.hamburger-box
+                    span.hamburger-inner
+.mobile-menu
+    .row-justify
+        +lang()
+        +search()
+    +nav()
+    +phone()
+
+

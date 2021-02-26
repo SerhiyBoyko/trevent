@@ -1,0 +1,76 @@
+.page-title{
+    line-height: 1.12;
+    letter-spacing: 1px;
+    font-weight: $f_black;
+    @include mobile {
+        margin-bottom: 30px;
+        font-size: 38px;
+    }
+    @include tablet_desktop {
+        margin-bottom: 25px;
+        font-size: 69px;
+    }
+}
+.page-subtitle{
+    display: block;
+    text-transform: uppercase;
+    @include mobile {
+        font-size: 18px;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    @include tablet_desktop {
+        font-size: 36px;
+        margin-bottom: -7px;
+        letter-spacing: 4.2px;
+    }
+}
+.content-title{
+    font-weight: $f_bold;
+    text-transform: uppercase;
+    line-height: 1.3;
+    @include mobile {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+    @include tablet_desktop {
+        font-size: 36px;
+        letter-spacing: 4px;
+    }
+}
+.content-text,
+.item__descr{
+    line-height: 1.7;
+    @include mobile {
+        font-size: 16px;
+    }
+    @include tablet_desktop {
+        font-size: 19px;
+    }
+}
+.item__title,
+.figure__title,
+.figure__title-min{
+    font-weight: $f_black;
+    text-transform: uppercase;
+}
+.item__title,
+.figure__title{
+    font-size: 24px;
+}
+.item__title{
+    letter-spacing: 1px;
+}
+.figure__title{
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+.figure__title-min{
+    font-size: 19px;
+    line-height: 1.5;
+    letter-spacing: .8px;
+}
+.figure__descr{
+    font-size: 14px;
+    line-height: 1.8;
+}

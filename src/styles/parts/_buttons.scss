@@ -1,0 +1,57 @@
+.button{
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: $red;
+    transition: background-color .2s cubic-bezier(.215,.61,.355,1);
+    cursor: pointer;
+    @include mobile {
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+    }
+    @include desktop {
+    }
+    .text{
+        text-transform: uppercase;
+    }
+    .icon,
+    .text{
+        transition: color .2s cubic-bezier(.215,.61,.355,1);
+    }
+    &:hover{
+        @include desktop {
+            background-color:$white;
+            .icon,
+            .text{
+                color:$red;
+            }
+        }
+    }
+}
+.content-button{
+    height: 43px;
+    line-height: 43px;
+    padding: 0 30px;
+    border-radius: 2px;
+    .text{
+        font-size: 18px;
+    }
+}
+.figure-button{
+    height: 33px;
+    line-height: 33px;
+    padding: 0 22px;
+    border-radius: 2px;
+    .text{
+        font-size: 14px;
+    }
+}
+.button-slide{
+    width: 43px;
+    height: 43px;
+    border-radius: 5px;
+    .icon-arrow-top{
+        font-size: 43px;
+    }
+}

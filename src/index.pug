@@ -1,0 +1,168 @@
+doctype html
+html(lang='ua')
+
+    include pug/_head
+
+    body 
+        include pug/parts/_header
+        #page
+
+            section.section.section-main
+
+                mixin main_slide(object)
+                    .swiper-slide
+                        .img-block(style="background-image:url("+object.image+")")
+                        .container
+                            .text-block
+                                span.page-subtitle= object.subtitle
+                                h1.page-title= object.title
+                                p.content-text= object.text
+                                a.button.content-button(href= object.link): span.text ДЕТАЛЬНІШЕ
+               
+                div.swiper-container.main-slider
+                    .swiper-wrapper
+                        +main_slide({
+                                image:     'images/main-2.jpg',
+                                subtitle:  'ПРОМИСЛОВЕ',
+                                title:     'Кліматичне Обладнання',
+                                text:      'Працює з кращими постачальниками комплектуючих з усього світу, розробляє обладнання стандартного і не стандартного виконання.',
+                                link:      '#'
+                        })
+                        +main_slide({
+                                image:     'images/main-2.jpg',
+                                subtitle:  'ПРОМИСЛОВЕ 2',
+                                title:     'Кліматичне Обладнання',
+                                text:      'Працює з кращими постачальниками комплектуючих з усього світу, розробляє обладнання стандартного і не стандартного виконання.',
+                                link:      '#'
+                        })
+                        +main_slide({
+                                image:     'images/main-2.jpg',
+                                subtitle:  'ПРОМИСЛОВЕ 3',
+                                title:     'Кліматичне Обладнання',
+                                text:      'Працює з кращими постачальниками комплектуючих з усього світу, розробляє обладнання стандартного і не стандартного виконання.',
+                                link:      '#'
+                        })
+                        +main_slide({
+                                image:     'images/main-2.jpg',
+                                subtitle:  'ПРОМИСЛОВЕ 4',
+                                title:     'Кліматичне Обладнання',
+                                text:      'Працює з кращими постачальниками комплектуючих з усього світу, розробляє обладнання стандартного і не стандартного виконання.',
+                                link:      '#'
+                        })
+
+                .swiper-pagination.main-slider-pagination
+                
+                .container
+                    
+                    mixin item(object)
+                        .item
+                            .item__icon-box: .sprite-icon(class=object.icon)
+                            span.item__title= object.title
+                            p.item__descr= object.descr
+
+                    .items-wrapper
+                        +item({
+                                icon:    'icon-quality',
+                                title:   'Якість',
+                                descr:   'Обладнання складається з комплектуючих європейського рівня.'
+                        })
+                        +item({
+                                icon:    'icon-guarantee',
+                                title:   'Гарантія',
+                                descr:   'Продукти Trevent мають 24 місяці гарантії.'
+                        })
+                        +item({
+                                icon:    'icon-support',
+                                title:   'Підтримка',
+                                descr:   'Кваліфікований персонал завжди готовий допомогти.'
+                        })
+                        +item({
+                                icon:    'icon-technology',
+                                title:   'Технологія',
+                                descr:   'Використовуються сучасні технології та матеріали.'
+                        }) 
+
+            section.section.section-bg(style="background-image:url(images/bg/bg-2.jpg)")
+                .section-bg
+                .content-wrapper
+                    h2.content-title ПРОДУКЦІЯ
+                    p.content-text Використання електрики в якості джерела нагріву отримало свою популярність в деяких випадках. Такі рішення застосовують для реалізації системи опалення в умовах, де немає можливості підключення традиційного теплоносія (води) або де системи опалення планується використовувати тимчасово.
+                
+                .container-wide
+
+                    mixin figure(object)
+                        .figure
+                            span.figure__title= object.title
+                            .figure__img-box: .figure__img(style="background-image:url("+object.bg_image+")")
+                            .figure__text-box
+                                .figure__icon-box: .sprite-icon(class=object.icon)
+                                span.figure__title-min= object.title
+                                p.figure__descr= object.descr
+                                a.button.figure-button(href= object.link): span.text ДЕТАЛЬНІШЕ
+                   
+                    .figures-wrapper
+                        +figure({
+                                title:    'ЕЛЕКТРИЧНИЙ НАГРІВ',
+                                descr:    'Використання електрики в якості джерела нагріву отримало власну популярність в деяких випадках.',
+                                icon:     'icon-heating',
+                                bg_image: 'images/figures/figure-1.jpg'
+                        })
+                        +figure({
+                                title:    'водяні теплоносії',
+                                descr:    'Використання електрики в якості джерела нагріву отримало власну популярність в деяких випадках.',
+                                icon:     'icon-heating',
+                                bg_image: 'images/figures/figure-2.jpg'
+                        })
+                        +figure({
+                                title:    'Повітряні завіси',
+                                descr:    'Використання електрики в якості джерела нагріву отримало власну популярність в деяких випадках.',
+                                icon:     'icon-heating',
+                                bg_image: 'images/figures/figure-3.jpg'
+                        })
+                        +figure({
+                                title:    'камери припливу',
+                                descr:    'Використання електрики в якості джерела нагріву отримало власну популярність в деяких випадках.',
+                                icon:     'icon-heating',
+                                bg_image: 'images/figures/figure-1.jpg'
+                        })
+            section.section
+                .content-wrapper
+                    h2.content-title НАМ ДОВІРЯЮТЬ
+
+                .container.relative
+
+                    mixin partner(object)
+                        .swiper-slide
+                            .partner
+                                .partner__logo-box
+                                    a(href=object.href).partner__link
+                                    .partner__logo(class=object.logo)
+
+                    .swiper-container.partner-slider
+                        .swiper-wrapper
+                            +partner({
+                                    logo:  'icon-remak',
+                                    href:  '#'
+                            })
+                            +partner({
+                                    logo:  'icon-reflex',
+                                    href:  '#'
+                            })
+                            +partner({
+                                    logo:  'icon-elektronik',
+                                    href:  '#'
+                            })
+                            +partner({
+                                    logo:  'icon-kermi',
+                                    href:  '#'
+                            })
+                    .swiper-button-prev.swiper-button-prev-partner
+                    .swiper-button-next.swiper-button-next-partner
+
+
+        include pug/parts/_footer
+
+        script(src="js/swiper-bundle.min.js")
+        script(src="js/main.js")
+                       
+

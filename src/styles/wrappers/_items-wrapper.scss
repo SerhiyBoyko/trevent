@@ -1,0 +1,71 @@
+.items-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    @include mobile {
+        margin-bottom: -40px;
+    }
+    @include mobile_tablet {
+        margin-bottom: -30px;
+    }
+    @include tablet{
+        justify-content: center;
+    }
+    .item{
+        padding: 0 40px;
+        text-align: center;
+        box-sizing: border-box;
+        @include mobile {
+            margin-bottom: 40px;
+        }
+        @include mobile_tablet {
+            max-width: 380px;
+        }
+        @include tablet {
+            margin-bottom: 30px;
+            width: 50%;
+        }
+        @include desktop {
+            width: 25%;
+        }
+        &__icon-box{
+            height: 90px;
+            display: flex;
+            align-items: flex-end;
+            .sprite-icon{
+                margin: 0 auto 20px;
+                background-image: url(../images/icons/sprite.png);
+            }
+            .icon-quality {
+                background-position: 0px 0px;
+                width: 66px;
+                height: 79px;
+            }
+            .icon-guarantee{
+                width: 63px;
+                height: 68px;
+                background-position: 0px -79px;
+            }
+            .icon-support {
+                background-position: -135px 0px;
+                width: 68px;
+                height: 68px;
+            }
+            .icon-technology {
+                background-position: -66px 0px;
+                width: 69px;
+                height: 68px;
+            }
+        }
+        &__title{
+            margin-bottom: 15px;
+            display: inline-block;
+            font-weight: $f_black;
+            @include mobile {
+                font-size: 20px;
+            }
+            @include tablet_desktop {
+                font-size: 24px;
+            }
+        }
+    }
+}

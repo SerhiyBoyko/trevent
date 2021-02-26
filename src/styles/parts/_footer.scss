@@ -1,0 +1,108 @@
+.footer{
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    @include mobile {
+        padding: 40px 0 25px;
+    }
+    @include tablet {
+        padding: 60px 0 30px;
+    }
+    @include desktop {
+        padding: 75px 0 65px;
+    }
+    .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__nav{
+        @include mobile_tablet {
+            text-align: center;
+            margin: 20px 0;
+        }
+        @include desktop {
+            display: flex;
+            margin: 27px 0;
+        }
+        li{
+            @include mobile {
+                margin:20px 0;
+            }
+            @include tablet {
+                margin:20px 0;
+            }
+            @include desktop {
+                margin: 0 30px;
+            }
+            a{
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #4d4d4d;
+                transition: color .2s cubic-bezier(.215,.61,.355,1);
+                &:hover{
+                    @include desktop {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .copy{
+        color: #4d4d4d;
+        @include mobile {
+            padding: 0 50px;
+            font-size: 12px;
+            line-height: 1.4;
+            box-sizing: border-box;
+        }
+        @include tablet_desktop {
+            font-size: 14px;
+        }
+    }
+    .button-slide{
+        position: absolute;
+        @include mobile {
+            bottom: -5px;
+        }
+        @include mobile_tablet {
+            right: 20px;
+        }
+        @include tablet_desktop {
+            bottom: -10px;
+        }
+        @include desktop_min {
+            right: 20px;
+        }
+        @include desktop_wide {
+            right: 0px;
+        }
+    }
+}
+.social{
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    &__icon{
+        margin: 0 7px;
+        color: #c9c9c9;
+        transition: color .2s cubic-bezier(.215,.61,.355,1);
+    }
+    .icon-facebook{
+        font-size: 20px;
+        &:hover{
+            @include desktop {
+                color: #385599;
+            }
+        }
+    }
+    .icon-youtube{
+        font-size: 28px;
+        &:hover{
+            @include desktop {
+                color: #F70000;
+            }
+        }
+    }
+}
